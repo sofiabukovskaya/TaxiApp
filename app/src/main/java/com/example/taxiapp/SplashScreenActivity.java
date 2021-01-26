@@ -16,11 +16,12 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void run(){
                 try {
-                    sleep(4000);
+                    sleep(3000);
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
-                    startActivity(new Intent(SplashScreenActivity.this, SignInActivity.class));
+                    startActivity(new Intent(SplashScreenActivity.this, ChooseModeActivity.class));
+                    overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 }
             }
         };
